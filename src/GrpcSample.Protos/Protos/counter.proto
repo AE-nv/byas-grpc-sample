@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcSample";
+
+package GrpcSample;
+
+// The greeting service definition.
+service Counter {
+  // Sends a greeting
+  rpc Count (CounterRequest) returns (stream CounterResponse);
+}
+
+// The request message containing the user's name.
+message CounterRequest {
+  int32 start = 1;
+}
+
+// The response message containing the greetings.
+message CounterResponse {
+  int32 count = 1;
+}

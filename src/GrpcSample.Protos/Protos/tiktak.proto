@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcSample";
+
+package GrpcSample;
+
+// The greeting service definition.
+service TikTak {
+  // Sends a greeting
+  rpc Tik (TikTakRequest) returns (TikTakResponse);
+}
+
+// The request message containing the user's name.
+message TikTakRequest {
+  string tik = 1;
+}
+
+// The response message containing the greetings.
+message TikTakResponse {
+  string tak = 1;
+}
